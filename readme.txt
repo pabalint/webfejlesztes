@@ -1,0 +1,2 @@
+<a href="https://www.freepik.com/free-photo/abstract-plexus-blue-geometrical-shapes-connection-ai-generated-image_41111846.htm#query=data&position=0&from_view=search&track=sph">Image by ojosujono96</a> on Freepik
+freepik.com CEO képek

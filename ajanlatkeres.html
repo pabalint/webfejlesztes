@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Pásztor Bálint Márk">
+    <meta name="copyright" content="Oktatási célokra">
+    <meta name="description" content="Vállalatirányítási rendszereket fejlesztő cég weboldala - nem valós vállalat!">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="images/favicon.png" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Martel:wght@300&family=Outfit:wght@300&display=swap"
+        rel="stylesheet">
+    <title>PrecisionPilot Systems</title>
+</head>
+
+<body>
+    <header>
+        <img src="images/head.png" alt="ceglogo">
+    </header>
+    <nav>
+        <ul>
+            <li><a href="index.html">Kezdőlap</a></li>
+            <li><a href="rolunk.html">Rólunk</a></li>
+            <li><a href="szolgaltatasok.html">Szolgáltatások</a></li>
+            <li><a href="referenciak.html">Referenciák</a></li>
+            <li id="current"><a href="#">Ajánlatkérés</a></li>
+            <li><a href="kapcsolat.html">Kapcsolat</a></li>
+        </ul>
+        <hr>
+    </nav>
+    <article class="ismerje">
+        <h2 id="ora">Rendelje meg még ma a szoftverét!<br> Várható elkészülési idő: </h2>
+    </article>
+    <form>
+        <div class="container">
+            <div class="kitolt"></div>
+            <article class="kezdolap">
+                <h2>Információk az Ön vállalkozásáról, és a szolgáltatásokról</h2>
+                <h3>Töltse ki az alábbi mezőket!</h3>
+                <label>
+                    <span class="phelyett">Alkalmazottak száma:</span><br>
+                    <select id="alkalmazott">
+                        <option>1-10</option>
+                        <option>11-25</option>
+                        <option>26-50</option>
+                        <option>51-100</option>
+                        <option>101-250</option>
+                        <option>251-1000</option>
+                        <option>1001-</option>
+                    </select>
+                </label><br>
+                <label>
+                    <span class="phelyett">Cég éves árbevétele (millió forint):</span><br>
+                    <select id="bevetel">
+                        <option>1-10</option>
+                        <option>11-50</option>
+                        <option>51-100</option>
+                        <option>101-500</option>
+                        <option>501-1000</option>
+                        <option>1001-5000</option>
+                        <option>5001-</option>
+                    </select>
+                </label><br>
+                <label>
+                    <span class="phelyett">Telephelyek száma:</span><br>
+                    <input type="number" min="1" max="15" step="1" value="1" id="telep">
+                </label><br>
+                <p>Válassza ki, hogy mi jellemző munkavállalói számítógépes tudására: *</p>
+                <label>
+                    <span class="phelyett">Nincs</span><input type="range" min="1" max="5" step="1" value="3" id="tud">
+                    <span class="phelyett">Magas színtű</span>
+                </label>
+                <p>Van-e már meglévő rendszere, amibe integrálni szeretné az új modulokat?</p>
+                <div class="ajanlat">
+                    <label>
+                        <span class="phelyett">Van</span><input type="radio" name="meglevo" id="rvan">
+                    </label>
+                    <label>
+                        <span class="phelyett">Nincs</span><input type="radio" name="meglevo" checked>
+                    </label>
+                </div>
+                <p>Szüksége van arra, hogy rendszerét üzemeltessük?**</p>
+                <div class="ajanlat">
+                    <label>
+                        <span class="phelyett">Igen</span><input type="radio" name="uzem" id="uzemigen">
+                    </label>
+                    <label>
+                        <span class="phelyett">Nem</span><input type="radio" name="uzem" checked>
+                    </label>
+                </div>
+                <p>Szüksége van arra, hogy felhasználói képzési programokat tartsunk munkavállalói számára?</p>
+                <div class="ajanlat">
+                    <label>
+                        <span class="phelyett">Igen</span><input type="radio" name="kepzes" id="kepzesigen">
+                    </label>
+                    <label>
+                        <span class="phelyett">Nem</span><input type="radio" name="kepzes" checked>
+                    </label>
+                </div>
+                <p class="kisbetus">*Az árajánlat kalkulációban csak akkor fog számítani a munkavállalók számítógépes
+                    tudása, ha felhasználói képzést is igényel a megrendelő!</p>
+                <p class="kisbetus">**A szoftver elkészítésének díjjában kedvezményt tudunk biztosítani, ha igényli
+                    havidíjas rendszerüzemeltetés szolgáltatásunkat!</p>
+            </article>
+            <article class="kezdolap">
+                <h2>Információk az igényelt szoftverről</h2>
+                <h3>Töltse ki az alábbi mezőket!</h3>
+                <label>
+                    <span class="phelyett">Hány nyelvű szoftverre van szükség?</span><br>
+                    <input type="number" min="1" max="10" step="1" value="1" id="nyelv">
+                </label>
+                <p>Milyen modulokra van szüksége?</p>
+                <div class="modulok">
+                    <label class="modul" id="mart1">
+                        GYÁRTÁSIRÁNYÍTÁS<br>
+                        <input type="checkbox" id="modul1">
+                    </label>
+                    <label class="modul" id="mart2">
+                        ÜGYVITEL<br>
+                        <input type="checkbox" id="modul2">
+                    </label>
+                    <label class="modul" id="mart3">
+                        KÖVETELÉSKEZELÉS<br>
+                        <input type="checkbox" id="modul3">
+                    </label>
+                    <label class="modul" id="mart4">
+                        ÉRTÉKESÍTÉS<br>
+                        <input type="checkbox" id="modul4">
+                    </label>
+                    <label class="modul" id="mart5">
+                        KERESKEDELEM<br>
+                        <input type="checkbox" id="modul5">
+                    </label>
+                    <label class="modul" id="mart6">
+                        CRM<br>
+                        <input type="checkbox" id="modul6">
+                    </label>
+                    <label class="modul" id="mart7">
+                        PÉNZÜGY<br>
+                        <input type="checkbox" id="modul7">
+                    </label>
+                    <label class="modul" id="mart8">
+                        ÁRAJÁNLAT KÉSZÍTÉS<br>
+                        <input type="checkbox" id="modul8">
+                    </label>
+                    <label class="modul" id="mart9">
+                        DÖNTÉSTÁMOGATÁS<br>
+                        <input type="checkbox" id="modul9">
+                    </label>
+                    <label class="modul" id="mart10">
+                        FOLYAMATIRÁNYÍTÁS<br>
+                        <input type="checkbox" id="modul10">
+                    </label>
+                </div>
+            </article>
+            <div class="kitolt"></div>
+        </div>
+        <div class="ismerje">
+            <input type="button" value="Árkalkulálás" id="kalkulal">
+            <input type="reset" value="Alaphelyzet" id="alap">
+        </div>
+    </form>
+    <article class="ismerje">
+        <h2 id="arajanlat">A kalkulált ár:</h2>
+    </article>
+    <script src="script.js"></script>
+    <footer>
+        <h2>Kérdése van?</h2>
+        <h2>Vegye fel velünk a kapcsolatot!</h2>
+        <a href="kapcsolat.html">Kapcsolat</a>
+        <p>Az oldal kizárólag tanulási célokat szolgál!</p>
+        <p>Készítette: Pásztor Bálint Márk</p>
+    </footer>
+</body>
+
+</html>

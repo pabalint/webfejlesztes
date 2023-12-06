@@ -1,6 +1,6 @@
 # webfejlesztes
 Az oldalt készítette: Pásztor Bálint Márk
-Az oldal URL címe: 
+Az oldal URL címe: https://pabalint.github.io/webfejlesztes/
 Az oldal egy egyéni vállalatirányítási rendszereket fejlesztő cég weboldala. 
 A weboldalon lehet informálódni a cégről, illetve árajánlat kalkulációkat végezni. 
 A kapcsolat fülön lehet írni a cégnek, ha a felhasználónak kérdése, vagy észrevétele van.

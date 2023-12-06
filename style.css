@@ -1,3 +1,5 @@
+/**Általános**/
+
 *{box-sizing: border-box;}
 
 html{
@@ -11,20 +13,34 @@ body{
     padding: 0px;
     font-family: 'Outfit', sans-serif;
 }
-.container{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
+
+h1, h2, h3, h4, p, a{
+    color: white;
 }
 
-.container>* {margin: 1%;
-    height:fit-content;
+a{
+    background-color: #5da0a2;
+    text-align: center;
+    border-radius: 10px;
+    text-decoration: none;
 }
 
-.ajanlat p{
-    display: inline;
+a:hover{
+    background-color: #11898d;
 }
+
+label{
+    color:#5da0a2;
+    margin-bottom: 0px;
+    white-space: nowrap;
+    font-weight: bold;
+}
+
+textarea{
+    width: 80%;
+}
+
+/**Oldalszerkezeti tagek**/
 
 header{
     text-align: center;
@@ -57,34 +73,100 @@ nav li a {
     margin: 10px;
 }
 
-h1, h2, h3, h4, p, a{
-    color: white;
-}
-
-.phelyett{
-    color: white;
-    display: inline;
-    margin-block-start: 1em;
-    margin-block-end: 1em;
-    margin-inline-start: 0px;
-    margin-inline-end: 0px;
-}
-
-a{
+article{
+    text-align: justify;
     background-color: #5da0a2;
-    text-align: center;
     border-radius: 10px;
-    text-decoration: none;
+    padding: 13px;
+    font-size: 1.2em;
+}
+
+article.kezdolap{
+    flex: 1 1 100%;
+    transition: 0.5s;
+}
+
+article.kezdolap h2{
+    text-align: center;
+}
+
+article.kezdolap ul li{
+    color: white;
+}
+
+article.galleria{
+    background-color: white;
+}
+
+article.kapcsolat{
+    background-color: #5da0a2;
+    color: white;
+    flex-basis: 95%;
+}
+
+article.kapcsolat p{
+    font-size: larger;
+    margin: 7px 0px;
+
+}
+
+article.kapcsolat li{
+    margin-bottom: 20px;
+}
+
+article.kapcsolat form{
+    margin-top: 20px;
+}
+
+footer{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+    background-color: #5da0a2;
+}
+
+footer a{
+    border: 2px solid white;
+    border-radius: 10px;
+    font-size: 25px;
+    padding: 5px;
+    margin-bottom: 5vh;
+}
+
+footer h2{
+    flex-basis: 100%;
+    margin-top: 0.8vh; 
+}
+
+footer p{
+    flex-basis: 100%;
+    margin-bottom: 1%;
+    margin-top: 0%;
+}
+
+/**Classok és Id-k**/
+
+.container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.container>* {margin: 1%;
+    height:fit-content;
+}
+
+.ajanlat p{
+    display: inline;
 }
 
 #current a{
     border-width: 5px;
     border-color: white;
     border-style: double;
-}
-
-a:hover{
-    background-color: #11898d;
 }
 
 .udv{
@@ -99,7 +181,7 @@ a:hover{
 }
 
 .udv h1{
-    margin-bottom: 30vh;
+    margin-bottom: 15vh;
 }
 
 .udv a{
@@ -108,33 +190,10 @@ a:hover{
     border: 2px solid white;
 }
 
-article{
-    text-align: justify;
-    background-color: #5da0a2;
-    border-radius: 10px;
-    padding: 13px;
-    font-size: 1.2em;
-}
-
-article.kezdolap{
-    flex: 1 1 100%;
-}
-
 .modul{
     display: block;
 }
 
-article.kezdolap{
-    transition: 0.5s;
-}
-
-article.kezdolap ul li{
-    color: white;
-}
-
-article.kezdolap h2{
-    text-align: center;
-}
 
 .csapatunk h2{
     margin-bottom: 0px;
@@ -173,12 +232,17 @@ article.kezdolap h2{
     display: flex;
 }
 
-.kisbetus{
-    font-size:small;
+.phelyett{
+    color: white;
+    display: inline;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
 }
 
-article.galleria{
-    background-color: white;
+.kisbetus{
+    font-size:small;
 }
 
 .modul{
@@ -188,13 +252,6 @@ article.galleria{
     margin: 5px;
     border-radius: 10px;
     font-size: 1.2em;
-}
-
-label{
-    color:#5da0a2;
-    margin-bottom: 0px;
-    white-space: nowrap;
-    font-weight: bold;
 }
 
 .modul p{
@@ -211,60 +268,14 @@ label{
     margin: 10px;
 }
 
-article.kapcsolat{
-    background-color: #5da0a2;
-    color: white;
-    flex-basis: 95%;
-}
-
-article.kapcsolat p{
-    font-size: larger;
-    margin: 7px 0px;
-
-}
-
-article.kapcsolat li{
-    margin-bottom: 20px;
-}
-
-article.kapcsolat form{
-    margin-top: 20px;
-}
-
 .kapcsolat input[type="submit"]{
     margin-top: 3vh;
 }
 
-textarea{
-    width: 80%;
-}
-
-footer{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    text-align: center;
-    background-color: #5da0a2;
-}
-
-footer a{
-    border: 2px solid white;
-    border-radius: 10px;
-    font-size: 25px;
-    padding: 5px;
-    margin-bottom: 5vh;
-}
-
-footer h2{
-    flex-basis: 100%;
-    margin-top: 0.8vh; 
-}
-
-footer p{
-    flex-basis: 100%;
-    margin-bottom: 1%;
-    margin-top: 0%;
+@media all and (min-width: 420px){
+    .udv h1{
+        margin-bottom: 30vh;
+    }
 }
 
 @media all and (min-width: 824px) {
@@ -274,6 +285,22 @@ footer p{
         justify-content: center;
         flex-wrap: wrap;
         align-items: center;
+    }
+
+    article.kezdolap, .modul{
+        flex-basis: 30%;
+    }
+
+    article.kezdolap:hover{
+        transform: scale(1.07)
+    }
+
+    article.kapcsolat{
+        flex-basis: 70%;
+    }
+
+    a:hover{
+        transform: scale(1.07)
     }
 
     .udv{
@@ -288,18 +315,6 @@ footer p{
         align-items: center;
     }
 
-    article.kezdolap, .modul{
-        flex-basis: 30%;
-    }
-
-    a:hover{
-        transform: scale(1.07)
-    }
-
-    article.kezdolap:hover{
-        transform: scale(1.07)
-    }
-
     .modulok{
         display: flex;
         flex-direction: row;
@@ -310,10 +325,6 @@ footer p{
 
     .modulok>* {margin: 1%;
         height:100px;
-    }
-
-    article.kapcsolat{
-        flex-basis: 70%;
     }
 
     .modul{

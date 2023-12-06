@@ -1,0 +1,12 @@
+Az oldalt készítette: Pásztor Bálint Márk
+Az oldal URL címe:
+Az oldal egy egyéni vállalatirányítási rendszereket fejlesztő cég weboldala. 
+A weboldalon lehet informálódni a cégről, illetve árajánlat kalkulációkat végezni. 
+A kapcsolat fülön lehet írni a cégnek, ha a felhasználónak kérdése, vagy észrevétele van.
+A javascript kódom az "ajánlatkérés" aloldalon van. Több funkciót is szolgál:
+1. Kiírja a várható elkészülési idejét a szoftvernek (mai dátum + 3 hónap)
+2. A kiválasztott moduloknak bordert ad.
+3. Elvégzi az árkalkulációt a beállított paraméterek alapján.
+Az oldal teljes egészében egy google web fontot használ.
+Az oldal 90%-ban chatGPT által generált tartalommal lett feltöltve!
+A képeket a kezdőoldalon látható kivételével szintén mesterséges inteligenciával generáltam.

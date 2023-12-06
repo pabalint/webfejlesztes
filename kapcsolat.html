@@ -12,6 +12,65 @@
     <link href="https://fonts.googleapis.com/css2?family=Martel:wght@300&family=Outfit:wght@300&display=swap"
         rel="stylesheet">
     <title>PrecisionPilot Systems</title>
+    <script src="images/galleria/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.5/dist/jquery.validate.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#myform").validate({
+                rules: {
+                    nev: "required",
+                    email: {
+                        required: true,
+                        email: true,
+                    },
+                    telefon: {
+                        required: true,
+                        minlength: 11,
+                        maxlength: 12,
+                    },
+                    uzenet: {
+                        required: true,
+                        minlength: 5, 
+                    },
+                    robot: {
+                        required: true,
+                    },
+                    emailenged: {
+                        required: true,
+                    }
+                },
+                
+                messages: {
+                    nev: "<br/>Írja be a nevét!",
+                    email: {
+                        required: "<br/>Írja be az email címét!",
+                        email: "<br>Valós email címet adjon meg!",
+                    },
+                    telefon: {
+                        required: "<br/>Írja be a telefonszámát!",
+                        minlength: "<br/>Valós telefonszámot adjon meg!",
+                        maxlength: "<br/>Valós telefonszámot adjon meg!",
+                    },
+                    uzenet: {
+                        required: "<br/>Töltse ki az üzenetek mezőt!",
+                        minlength: "<br/>Töltse ki az üzenetek mezőt!",
+                    },
+                    robot: {
+                        required: "<br/>Kérjük bizonyítsa, hogy nem robot!",
+                    },
+                    emailenged: {
+                        required: "<br/>Engedélyezi, hogy kérdésére emailban válaszoljunk?"
+                    }
+
+                },
+            });
+        });
+    </script>
+    <style>
+        label.error{
+            color: rgb(212, 24, 24);
+        }
+    </style>
 </head>
 
 <body>
@@ -51,7 +110,7 @@
                         <p>Árajánlathoz: arajanlat@precisionpilot.hu</p>
                     </li>
                     <li><p>A gyorsabb válasz érdekében, kérdés vagy észrevétel esetén használja az alábbi űrlapunkat. Kollégáink rövid időn belül válaszolnak Önnek.</p>
-                    <form method="post" action="http://szamtud.uni-corvinus.hu/receive.php" novalidate>
+                    <form method="post" action="http://szamtud.uni-corvinus.hu/receive.php" id="myform" novalidate>
                         <label>
                             <span class="phelyett">Név</span><br>
                             <input type="text" name="nev" placeholder="Minta János"><br>
